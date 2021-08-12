@@ -14,11 +14,11 @@
   <meta http-equiv="x-ua-compatible" content="ie=edge">
   
   <meta name="theme-color" content="#2f4154">
-  <meta name="description" content="Python 学习笔记, python">
+  <meta name="description" content="这个人很懒，以至于自己的博客都抄">
   <meta name="author" content="盛小航">
   <meta name="keywords" content="">
   
-  <title>Python——part 4 - 盛小航的博客</title>
+  <title>操作说明 - 盛小航的博客</title>
 
   <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" />
 
@@ -158,12 +158,12 @@
 </nav>
 
     <div class="banner" id="banner" parallax=true
-         style="background: url('/img/python.svg') no-repeat center center;
+         style="background: url('/img/default.png') no-repeat center center;
            background-size: cover;">
       <div class="full-bg-img">
         <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
           <div class="page-header text-center fade-in-up">
-            <span class="h2" id="subtitle" title="Python——part 4">
+            <span class="h2" id="subtitle" title="操作说明">
               
             </span>
 
@@ -178,8 +178,8 @@
   
     <span class="post-meta">
       <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-      <time datetime="2021-07-15 21:30" pubdate>
-        2021年7月15日 晚上
+      <time datetime="2021-08-12 17:00" pubdate>
+        2021年8月12日 下午
       </time>
     </span>
   
@@ -190,7 +190,7 @@
     
     <span class="post-meta mr-2">
       <i class="iconfont icon-chart"></i>
-      10 字
+      711 字
     </span>
   
 
@@ -200,7 +200,7 @@
       <i class="iconfont icon-clock-fill"></i>
       
       
-      1
+      15
        分钟
     </span>
   
@@ -238,29 +238,84 @@
         <div class="py-5" id="board">
           <article class="post-content mx-auto">
             <!-- SEO header -->
-            <h1 style="display: none">Python——part 4</h1>
+            <h1 style="display: none">操作说明</h1>
             
             <div class="markdown-body">
-              <h1 id="Python——part-4-代码规范与格式"><a href="#Python——part-4-代码规范与格式" class="headerlink" title="Python——part 4 代码规范与格式"></a>Python——part 4 代码规范与格式</h1>
+              <h1 id="转镜直写光刻机操作细节说明"><a href="#转镜直写光刻机操作细节说明" class="headerlink" title="转镜直写光刻机操作细节说明"></a>转镜直写光刻机操作细节说明</h1><h2 id="开机流程"><a href="#开机流程" class="headerlink" title="开机流程"></a>开机流程</h2><h2 id="特别注意"><a href="#特别注意" class="headerlink" title="特别注意"></a>特别注意</h2><ul>
+<li>位移台不平，自动跟踪范围受限，刻蚀尺寸不宜过大，详细措施见：<a href="#自动跟踪">自动跟踪</a></li>
+<li>先开电脑再开设备，先关设备再关电脑；</li>
+<li>位移台设置部分是对位移台进行控制，注意方向</li>
+</ul>
+<h2 id="自动跟踪"><a href="#自动跟踪" class="headerlink" title="自动跟踪"></a>自动跟踪</h2><p>由于位移平台不平，请注意：</p>
+<ul>
+<li>每次刻写尺寸不要大于20 * 20 （$\phi$​​​30）（暂时）（左上低，右下高）</li>
+<li>自动跟踪压电陶瓷阈值是[0 – 70 mV]，因此刻写时，可以使刻写区域中心为35 mV（<strong>在中心区域粗聚焦后开启跟踪</strong>），以尽可能使用阈值范围。</li>
+<li>关机前或者移走样品前，关闭自动跟踪。</li>
+</ul>
+<p>跟踪数据参数sample如下：</p>
+<h2 id="转镜设置"><a href="#转镜设置" class="headerlink" title="转镜设置"></a>转镜设置</h2><ul>
+<li>每次修改转镜后，需要重新启动转镜以刷新；</li>
+<li>转镜重新运行需要一段时间以稳定转速；</li>
+<li>转境最快为2w转左右；</li>
+</ul>
+<h2 id="激光器设置"><a href="#激光器设置" class="headerlink" title="激光器设置"></a>激光器设置</h2><div class="table-container">
+<table>
+<thead>
+<tr>
+<th>电压</th>
+<th>波长</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+</tr>
+</tbody>
+</table>
+</div>
+<h2 id="光栅刻写"><a href="#光栅刻写" class="headerlink" title="光栅刻写"></a>光栅刻写</h2><ol>
+<li><p>横向长边行程：表示光栅的 <em>x</em> 方向的长度</p>
+</li>
+<li><p>横向回轴速度：表示位移台从左至右（此时不雕刻，返回起点）时的速度，最大值是 $1000\ mm/s$，（不建议过快）</p>
+</li>
+<li><p>横轴刻写速度：表示刻写时的速度，这个速度与转镜转速有直接关系，公式如下</p>
+<script type="math/tex; mode=display">
+v_{横轴刻写} = \frac{光栅周期(单位：)}{\frac{1}{转镜转速}}</script><p>纵向换行间距：每行光栅长度与间隔之和（<em>y</em>方向），不会影响实际光栅宽度，但是设置错误会使光栅之间交汇</p>
+</li>
+<li><p>纵向换行速度：位移台y方向上的移动速度，一般设置为 2 </p>
+</li>
+<li><p>==延迟时间(25 <em>ns</em>)==：单位片转镜内所刻写长度所需时间单位的中间值，此值会决定理想输出光的中心，经验参数，参数表如下：</p>
+<p>| 转镜转速（单位：面/秒） | 对应延迟时间(中心位置)(单位：个) |<br>| ———————————- | ———————————————— |<br>| 3000                    | 3720（标定）                     |<br>| 6000                    | 1860                             |<br>| 9000                    | 1240                             |<br>| 1200                    | 930                              |</p>
+</li>
+<li><p>==持续时间(25 <em>ns</em>)==：单位片转镜内中间值得上下范围，这个值决定每行刻写光栅的长度，经验参数，参数表如下：</p>
+<p>| 转镜转速（单位：面/秒） | 对应持续时间(单位：个) | 对应光栅长度           |<br>| ———————————- | ——————————— | ——————————— |<br>| 3000                    | 2000                   | 105.390 $\mu m$ (标定)​ |<br>| 3000                    | 1000                   | 52.695 $\mu m$         |<br>| 6000                    | 1000                   | 105.390 $\mu m$        |<br>| 9000                    | 667                    | 105.390 $\mu m$        |<br>| 12000                   | 500                    | 105.390 $\mu m$        |</p>
+</li>
+<li><p>扫描行数：刻蚀多少行光栅；</p>
+<script type="math/tex; mode=display">
+扫描行数 \times 纵向换行间距 = 光栅纵向长度（宽）</script></li>
+<li><p>激光输出延迟时间：位移台启动时存在加速过程，此参数会让激光等待位移台相应时间后再开始刻蚀，以此保证刻蚀结果均为均匀结构。</p>
+<p>​                                    目前测试数值为：50 ms；</p>
+</li>
+</ol>
+
             </div>
             <hr>
             <div>
               <div class="post-metas mb-3">
                 
-                  <div class="post-meta mr-3">
-                    <i class="iconfont icon-category"></i>
-                    
-                      <a class="hover-with-bg" href="/categories/python/">python</a>
-                    
-                  </div>
-                
                 
                   <div class="post-meta">
                     <i class="iconfont icon-tags"></i>
                     
-                      <a class="hover-with-bg" href="/tags/python/">python</a>
-                    
-                      <a class="hover-with-bg" href="/tags/%E5%AD%A6%E4%B9%A0/">学习</a>
+                      <a class="hover-with-bg" href="/tags/%E5%8A%A0%E5%AF%86/">加密</a>
                     
                   </div>
                 
@@ -272,29 +327,6 @@
                   
                 </p>
               
-              
-                <div class="post-prevnext">
-                  <article class="post-prev col-6">
-                    
-                    
-                      <a href="/2021/07/16/2021-07-16-work/">
-                        <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">2021年7月16日报告</span>
-                        <span class="visible-mobile">上一篇</span>
-                      </a>
-                    
-                  </article>
-                  <article class="post-next col-6">
-                    
-                    
-                      <a href="/2021/07/09/2021-07-09-python-part3/">
-                        <span class="hidden-mobile">Python——part 3 代码规范与格式</span>
-                        <span class="visible-mobile">下一篇</span>
-                        <i class="iconfont icon-arrowright"></i>
-                      </a>
-                    
-                  </article>
-                </div>
               
             </div>
 
