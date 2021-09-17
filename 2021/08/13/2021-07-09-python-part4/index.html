@@ -18,7 +18,7 @@
   <meta name="author" content="盛小航">
   <meta name="keywords" content="">
   
-  <title>Python——part 4 - 盛小航的博客</title>
+  <title>Python——part 4 判断 - 盛小航的博客</title>
 
   <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" />
 
@@ -163,7 +163,7 @@
       <div class="full-bg-img">
         <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
           <div class="page-header text-center fade-in-up">
-            <span class="h2" id="subtitle" title="Python——part 4">
+            <span class="h2" id="subtitle" title="Python——part 4 判断">
               
             </span>
 
@@ -178,8 +178,8 @@
   
     <span class="post-meta">
       <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-      <time datetime="2021-07-15 21:30" pubdate>
-        2021年7月15日 晚上
+      <time datetime="2021-08-13 21:30" pubdate>
+        2021年8月13日 晚上
       </time>
     </span>
   
@@ -190,7 +190,7 @@
     
     <span class="post-meta mr-2">
       <i class="iconfont icon-chart"></i>
-      10 字
+      258 字
     </span>
   
 
@@ -200,7 +200,7 @@
       <i class="iconfont icon-clock-fill"></i>
       
       
-      1
+      7
        分钟
     </span>
   
@@ -238,10 +238,34 @@
         <div class="py-5" id="board">
           <article class="post-content mx-auto">
             <!-- SEO header -->
-            <h1 style="display: none">Python——part 4</h1>
+            <h1 style="display: none">Python——part 4 判断</h1>
             
             <div class="markdown-body">
-              <h1 id="Python——part-4-代码规范与格式"><a href="#Python——part-4-代码规范与格式" class="headerlink" title="Python——part 4 代码规范与格式"></a>Python——part 4 代码规范与格式</h1>
+              <h1 id="Python——part-4-判断"><a href="#Python——part-4-判断" class="headerlink" title="Python——part 4 判断"></a>Python——part 4 判断</h1><h2 id="判断语句的形式："><a href="#判断语句的形式：" class="headerlink" title="判断语句的形式："></a>判断语句的形式：</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-keyword">if</span> A == B :<br>	命令<span class="hljs-number">1</span><br><span class="hljs-keyword">else</span> :<br>	命令<span class="hljs-number">2</span><br></code></pre></td></tr></table></figure>
+<ul>
+<li>冒号不可少</li>
+<li>不需要 <code>end</code></li>
+</ul>
+<h2 id="比较"><a href="#比较" class="headerlink" title="比较"></a>比较</h2><ul>
+<li><code>==</code>：判断相等</li>
+<li><code>!=</code>：判断不等</li>
+<li>其余都存在</li>
+</ul>
+<h3 id="多个文件比较"><a href="#多个文件比较" class="headerlink" title="多个文件比较"></a>多个文件比较</h3><ul>
+<li><p><code>and</code>：作用同C.<code>&amp;</code>，使用时前后内容可用括号包裹（也可不用）</p>
+</li>
+<li><p><code>or</code>：作用同C.<code>|</code></p>
+</li>
+<li><p><code>in</code>：类似C.<code>?</code>，表示 A 是否在 B 中</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-meta">&gt;&gt;&gt; </span>A <span class="hljs-keyword">in</span> B<br><span class="hljs-literal">False</span><br></code></pre></td></tr></table></figure>
+</li>
+<li><p><code>not in</code>： 表示 A 是否不在 B 中</p>
+</li>
+</ul>
+<h2 id="if-语句"><a href="#if-语句" class="headerlink" title="if 语句"></a>if 语句</h2><h3 id="if-elif-else-结构"><a href="#if-elif-else-结构" class="headerlink" title="if - elif - else 结构"></a>if - elif - else 结构</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-comment"># 4岁以下收费</span><br><span class="hljs-comment"># 4--18收费5刀</span><br><span class="hljs-comment"># 18(含)以上收费10刀</span><br><br>age = <span class="hljs-built_in">int</span>(<span class="hljs-built_in">input</span>(<span class="hljs-string">&#x27;Please input your age:&#x27;</span>))<br><span class="hljs-keyword">if</span> age &lt; <span class="hljs-number">4</span> :<br>    <span class="hljs-built_in">print</span>(<span class="hljs-string">&quot;Your admission cost is $0 !&quot;</span>)<br><span class="hljs-keyword">elif</span> age &lt; <span class="hljs-number">18</span> :<br>    <span class="hljs-built_in">print</span>(<span class="hljs-string">&quot;Your admission cost is $5 !&quot;</span>)<br><span class="hljs-keyword">else</span> :<br>    <span class="hljs-built_in">print</span>(<span class="hljs-string">&quot;Your admission cost is $10 !&quot;</span>)  <br></code></pre></td></tr></table></figure>
+<h3 id="if-A-in-B-语句"><a href="#if-A-in-B-语句" class="headerlink" title="if A in B: 语句"></a>if A in B: 语句</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><code class="hljs python">requested_toppings = [<span class="hljs-string">&#x27;mushrooms&#x27;</span>, <span class="hljs-string">&#x27;extra cheese&#x27;</span>]<br><span class="hljs-keyword">if</span> <span class="hljs-string">&#x27;mushrooms&#x27;</span> <span class="hljs-keyword">in</span> requested_toppings:<br>	<span class="hljs-built_in">print</span>(<span class="hljs-string">&quot;Adding mushrooms.&quot;</span>)<br><span class="hljs-keyword">if</span> <span class="hljs-string">&#x27;pepperoni&#x27;</span> <span class="hljs-keyword">in</span> requested_toppings:<br>	<span class="hljs-built_in">print</span>(<span class="hljs-string">&quot;Adding pepperoni.&quot;</span>)<br><span class="hljs-keyword">if</span> <span class="hljs-string">&#x27;extra cheese&#x27;</span> <span class="hljs-keyword">in</span> requested_toppings:<br>	<span class="hljs-built_in">print</span>(<span class="hljs-string">&quot;Adding extra cheese.&quot;</span>)<br><span class="hljs-built_in">print</span>(<span class="hljs-string">&quot;\nFinished making your pizza!&quot;</span>)<br></code></pre></td></tr></table></figure>
+<h3 id="检测列表是否为空的："><a href="#检测列表是否为空的：" class="headerlink" title="检测列表是否为空的："></a>检测列表是否为空的：</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-keyword">if</span> 列表名 ：<br>	若不空，即<span class="hljs-literal">True</span>,执行<br><span class="hljs-keyword">else</span> :<br>    若空，则……   <br></code></pre></td></tr></table></figure>
+
             </div>
             <hr>
             <div>
@@ -277,9 +301,9 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/2021/07/16/2021-07-16-work/">
+                      <a href="/2021/09/17/2021-09-17-%E8%87%AA%E5%8A%A8%E5%88%A0%E9%99%A4EasyConnect%E5%BC%80%E5%90%AF%E5%90%8E%E5%BC%BA%E5%88%B6%E7%94%9F%E6%88%90%E7%9A%84%E6%A1%8C%E9%9D%A2%E5%BF%AB%E6%8D%B7%E6%96%B9%E5%BC%8F/">
                         <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">2021年7月16日报告</span>
+                        <span class="hidden-mobile">自动删除EasyConnect开启后强制生成的桌面快捷方式</span>
                         <span class="visible-mobile">上一篇</span>
                       </a>
                     
@@ -287,8 +311,8 @@
                   <article class="post-next col-6">
                     
                     
-                      <a href="/2021/07/09/2021-07-09-python-part3/">
-                        <span class="hidden-mobile">Python——part 3 代码规范与格式</span>
+                      <a href="/2021/07/16/2021-07-16-work/">
+                        <span class="hidden-mobile">2021年7月16日报告</span>
                         <span class="visible-mobile">下一篇</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>
