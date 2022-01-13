@@ -190,7 +190,7 @@
     
     <span class="post-meta mr-2">
       <i class="iconfont icon-chart"></i>
-      258 字
+      289 字
     </span>
   
 
@@ -200,7 +200,7 @@
       <i class="iconfont icon-clock-fill"></i>
       
       
-      7
+      8
        分钟
     </span>
   
@@ -264,7 +264,11 @@
 </ul>
 <h2 id="if-语句"><a href="#if-语句" class="headerlink" title="if 语句"></a>if 语句</h2><h3 id="if-elif-else-结构"><a href="#if-elif-else-结构" class="headerlink" title="if - elif - else 结构"></a>if - elif - else 结构</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-comment"># 4岁以下收费</span><br><span class="hljs-comment"># 4--18收费5刀</span><br><span class="hljs-comment"># 18(含)以上收费10刀</span><br><br>age = <span class="hljs-built_in">int</span>(<span class="hljs-built_in">input</span>(<span class="hljs-string">&#x27;Please input your age:&#x27;</span>))<br><span class="hljs-keyword">if</span> age &lt; <span class="hljs-number">4</span> :<br>    <span class="hljs-built_in">print</span>(<span class="hljs-string">&quot;Your admission cost is $0 !&quot;</span>)<br><span class="hljs-keyword">elif</span> age &lt; <span class="hljs-number">18</span> :<br>    <span class="hljs-built_in">print</span>(<span class="hljs-string">&quot;Your admission cost is $5 !&quot;</span>)<br><span class="hljs-keyword">else</span> :<br>    <span class="hljs-built_in">print</span>(<span class="hljs-string">&quot;Your admission cost is $10 !&quot;</span>)  <br></code></pre></td></tr></table></figure>
 <h3 id="if-A-in-B-语句"><a href="#if-A-in-B-语句" class="headerlink" title="if A in B: 语句"></a>if A in B: 语句</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><code class="hljs python">requested_toppings = [<span class="hljs-string">&#x27;mushrooms&#x27;</span>, <span class="hljs-string">&#x27;extra cheese&#x27;</span>]<br><span class="hljs-keyword">if</span> <span class="hljs-string">&#x27;mushrooms&#x27;</span> <span class="hljs-keyword">in</span> requested_toppings:<br>	<span class="hljs-built_in">print</span>(<span class="hljs-string">&quot;Adding mushrooms.&quot;</span>)<br><span class="hljs-keyword">if</span> <span class="hljs-string">&#x27;pepperoni&#x27;</span> <span class="hljs-keyword">in</span> requested_toppings:<br>	<span class="hljs-built_in">print</span>(<span class="hljs-string">&quot;Adding pepperoni.&quot;</span>)<br><span class="hljs-keyword">if</span> <span class="hljs-string">&#x27;extra cheese&#x27;</span> <span class="hljs-keyword">in</span> requested_toppings:<br>	<span class="hljs-built_in">print</span>(<span class="hljs-string">&quot;Adding extra cheese.&quot;</span>)<br><span class="hljs-built_in">print</span>(<span class="hljs-string">&quot;\nFinished making your pizza!&quot;</span>)<br></code></pre></td></tr></table></figure>
-<h3 id="检测列表是否为空的："><a href="#检测列表是否为空的：" class="headerlink" title="检测列表是否为空的："></a>检测列表是否为空的：</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-keyword">if</span> 列表名 ：<br>	若不空，即<span class="hljs-literal">True</span>,执行<br><span class="hljs-keyword">else</span> :<br>    若空，则……   <br></code></pre></td></tr></table></figure>
+<h3 id="检测列表是否为空的："><a href="#检测列表是否为空的：" class="headerlink" title="检测列表是否为空的："></a>检测列表是否为空的：</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-keyword">if</span> 列表名 :<br>	若不空，即<span class="hljs-literal">True</span>,执行<br><span class="hljs-keyword">else</span> :<br>    若空，则……   <br></code></pre></td></tr></table></figure>
+<h2 id="if语句的格式要求"><a href="#if语句的格式要求" class="headerlink" title="if语句的格式要求"></a>if语句的格式要求</h2><p>PEP 8 提供的建议是：</p>
+<ul>
+<li>在比较运算符的两边各添加一个空格。</li>
+</ul>
 
             </div>
             <hr>

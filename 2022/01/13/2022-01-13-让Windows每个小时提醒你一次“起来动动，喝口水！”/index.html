@@ -18,7 +18,7 @@
   <meta name="author" content="盛小航">
   <meta name="keywords" content="">
   
-  <title>自动删除EasyConnect开启后强制生成的桌面快捷方式 - 盛小航的博客</title>
+  <title>让Windows每个小时提醒你一次“起来动动，喝口水！” - 盛小航的博客</title>
 
   <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" />
 
@@ -163,7 +163,7 @@
       <div class="full-bg-img">
         <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
           <div class="page-header text-center fade-in-up">
-            <span class="h2" id="subtitle" title="自动删除EasyConnect开启后强制生成的桌面快捷方式">
+            <span class="h2" id="subtitle" title="让Windows每个小时提醒你一次“起来动动，喝口水！”">
               
             </span>
 
@@ -178,8 +178,8 @@
   
     <span class="post-meta">
       <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-      <time datetime="2021-09-17 10:30" pubdate>
-        2021年9月17日 上午
+      <time datetime="2022-01-13 15:30" pubdate>
+        2022年1月13日 下午
       </time>
     </span>
   
@@ -190,7 +190,7 @@
     
     <span class="post-meta mr-2">
       <i class="iconfont icon-chart"></i>
-      909 字
+      503 字
     </span>
   
 
@@ -200,7 +200,7 @@
       <i class="iconfont icon-clock-fill"></i>
       
       
-      20
+      10
        分钟
     </span>
   
@@ -238,45 +238,35 @@
         <div class="py-5" id="board">
           <article class="post-content mx-auto">
             <!-- SEO header -->
-            <h1 style="display: none">自动删除EasyConnect开启后强制生成的桌面快捷方式</h1>
+            <h1 style="display: none">让Windows每个小时提醒你一次“起来动动，喝口水！”</h1>
             
             <div class="markdown-body">
-              <h1 id="自动删除EasyConnect登陆后会自动强制生成一个桌面快捷方式"><a href="#自动删除EasyConnect登陆后会自动强制生成一个桌面快捷方式" class="headerlink" title="自动删除EasyConnect登陆后会自动强制生成一个桌面快捷方式"></a>自动删除EasyConnect登陆后会自动强制生成一个桌面快捷方式</h1><p>不知道各位如何认为 <code>win</code> 的桌面是一个什么空间。在我看来，自<code>win8</code>以来，微软似乎一直努力推广动态磁贴。显然，他们失败了，<code>xp</code>给国人的操作系统的启蒙导致在所有人的固有印象中，桌面作为了一种承载所有应用程序、文件和文件夹的空间。但是，如果曾试用过<code>win10</code>最早几个版本，微软曾一度将关机按钮藏在设置中，除了微软试图让用户永远不离开<code>windows</code>外，也证明了，屏幕右下角那个微软标志，不仅仅只是作为点击关机的一级菜单，它承载了微软对动态磁贴最终幻想，以及，桌面这个本就不该承受如此多内容的，可以完全个性化定制的一种期盼。</p>
-<p>可是，学校的校外链接<code>VPN</code>使用<code>EasyConnect</code>作为客户端，为了避免麻烦，只能忍受这个软件带来的速度波动、全局匹配以及最致命的自动生成桌面快捷方式。</p>
-<p>所以，欸嘿(￣﹃￣)，拿出珍藏多年的 <code>.bat</code> 以实现：</p>
-<ul>
-<li>在动态磁贴正常启动<code>EasyConnect</code>;</li>
-<li>扼杀这个快捷方式;</li>
-<li>不要让我看到黑黑的<code>CMD</code>框框。</li>
-</ul>
-<h2 id="以下是源代码"><a href="#以下是源代码" class="headerlink" title="以下是源代码"></a>以下是源代码</h2><ol>
-<li>首先解决前两个目的</li>
+              <h1 id="让Windows每个小时提醒你一次“起来动动，喝口水！”"><a href="#让Windows每个小时提醒你一次“起来动动，喝口水！”" class="headerlink" title="让Windows每个小时提醒你一次“起来动动，喝口水！”"></a>让Windows每个小时提醒你一次“起来动动，喝口水！”</h1><h2 id="1-写一个弹窗脚本让你起来动动"><a href="#1-写一个弹窗脚本让你起来动动" class="headerlink" title="1.写一个弹窗脚本让你起来动动"></a>1.写一个弹窗脚本让你起来动动</h2><ol>
+<li>创建一个文本文档，输入以下内容。<br>（注：如果之后中文出现乱码，请将此文本文档的另存为，并根据图1设置编码格式为<code>ANSI</code>，其余不变）</li>
 </ol>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br></pre></td><td class="code"><pre><code class="hljs assembly"># 作者注：请勿复制这里，本部分保存于一个叫：”随便什么名.bat&quot; 的文件，文中的路径需要根据自己的情况调整。<br>::这是一个用于删除Easyconnect自动创建桌面方式的脚本。&quot;灵感来源于https://zhuanlan.zhihu.com/p/381693850&quot;<br>::航的改编<br><br>@echo off<br>::设置桌面快捷方式路径<br>set lnk_path=C:\Users\Public\Desktop\EasyConnect.lnk<br><br><br>::启动EasyConnect客户端之前先删除桌面已有的快捷方式<br>del C:\Users\Public\Desktop\EasyConnect.lnk <br><br>::启动EasyConnect客户端<br>start &quot;&quot; &quot;C:\Program Files (x86)\Sangfor\SSL\SangforCSClient\SangforCSClient.exe&quot;<br><br>timeout /t 20<br><br>::如果存在快捷方式，则执行如下操作<br>: loop<br>if exist C:\Users\Public\Desktop\EasyConnect.lnk (<br>del C:\Users\Public\Desktop\EasyConnect.lnk<br><br>:: 极其先进的刷新桌面命令<br>setlocal EnableExtensions DisableDelayedExpansion<br>ie4uinit.exe -show<br>endlocal<br><br>goto  finish<br>)  else ( <br>timeout /t 10 /nobreak<br>goto  loop<br>)<br><br>: finish<br>if  not exit %lnk_path%( <br>:: 极其先进的退出命令<br>exit<br>)<br><br></code></pre></td></tr></table></figure>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs assembly">mshta vbscript:msgbox(&quot;工作一小时了！该起来动动了！记得喝杯水！（弹窗主要内容）&quot;,64,&quot;警告！（弹窗标题）&quot;)(window.close)<br></code></pre></td></tr></table></figure>
+<p><img src="\img\2022年1月13日\1.png" srcset="/img/loading.gif" lazyload alt="图1"></p>
 <ol>
-<li>接着解决黑框框本身</li>
-</ol>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs assembly"># 作者注：请勿复制这里，本部分保存于一个叫：”随便什么名.vbs&quot; 的文件，文中的.bat名字同上面的随便什么名<br>Set oShell = CreateObject (&quot;Wscript.Shell&quot;) <br>Dim strArgs<br>strArgs = &quot;cmd /c Easyconnect.bat&quot;<br>oShell.Run strArgs, 0, false<br></code></pre></td></tr></table></figure>
-<ol>
-<li>接着创建<code>.vbs</code>的快捷方式</li>
-<li>把这个快捷方式放到 <code>C:\ProgramData\Microsoft\Windows\Start Menu\Programs</code>中，此时<code>win</code>标中的文件瀑布流会出现快捷方式名。（可以顺带手在本目录下删除原来的那个软件自带的快捷方式）</li>
-<li>将这个新快捷方式拖到动态磁贴。</li>
-<li>测试一下！（有问题八成是没改文件目录，有问题欢迎留言！）</li>
-</ol>
-<h2 id="关于参考"><a href="#关于参考" class="headerlink" title="关于参考"></a>关于参考</h2><ul>
-<li><p><code>.vbs</code>以及<code>.bat</code>参考了知乎作者<code>StableGenius</code>的专栏<code>启动EasyConnect后自动删除其桌面快捷方式</code>, <a href="[启动EasyConnect后自动删除其桌面快捷方式 - 知乎 (zhihu.com">参考这里</a>](<a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/381693850">https://zhuanlan.zhihu.com/p/381693850</a>))</p>
-<p>该作者还提供了视频支持，有不会操作的可以看一下。</p>
-<p>并再次感谢这位作者的贡献。</p>
-<p>需要强调的是，作者专栏中提供的部分代码存在bug，因此存在个人修改，无其他意思。</p>
+<li><p>将此文本文档的文件后缀名改为<code>.bat</code></p>
 </li>
-<li><p>注意，本文所有代码开源，并遵循本博客所遵守的开源协议，转载请注明出处！</p>
+<li><p>请测试运行，看看是否会正确弹出对话框.</p>
+<p>如果需要调整，请右键该文件，会出现<code>编辑</code>选项。对于 win11 用户，请点击<code>显示更多选项</code>后再选择<code>编辑</code></p>
 </li>
-</ul>
-<h2 id="以下提供截屏演示"><a href="#以下提供截屏演示" class="headerlink" title="以下提供截屏演示"></a>以下提供截屏演示</h2><ol>
-<li><img src="\img\ec\1.jpg" srcset="/img/loading.gif" lazyload alt="在动态磁贴打开软件"></li>
-<li><img src="\img\ec\2.jpg" srcset="/img/loading.gif" lazyload alt="正常打开"></li>
-<li><img src="\img\ec\3.jpg" srcset="/img/loading.gif" lazyload alt="正常打开没有快捷方式和CMD的黑框"></li>
 </ol>
+<h2 id="2-让这个脚本自己动起来"><a href="#2-让这个脚本自己动起来" class="headerlink" title="2. 让这个脚本自己动起来"></a>2. 让这个脚本自己动起来</h2><ol>
+<li>在搜索栏中搜索<code>计算级管理</code>，打开程序！</li>
+<li>左侧栏打开<code>任务计划程序</code>；</li>
+<li>在<code>任务计划库程序库</code>文件夹中创建新的子文件夹（右键，名字随意，建议英文）并选中该子文件夹；</li>
+<li>点击程序最右侧栏的<code>创建任务</code>；</li>
+<li>按个人喜好输入名称，此时注意位置是否为刚刚创建的新子文件夹目录下；</li>
+<li>点击触发器栏——新建——<code>开始任务栏</code>设置为：<code>登录时</code>——选择特定用户或者默认所有用户——高级设置，重复任务间隔<code>一小时</code>，持续时间<code>无限制</code>——点击<code>已启用</code>——<code>确定</code>；</li>
+<li>点击操作栏——新建——程序或脚本处选择刚刚编写的<code>.bat</code>文件——<code>确定</code>；</li>
+<li>条件栏和设置栏按需调整；</li>
+<li>确定</li>
+<li>设置完后类似下图2，可以点击右下侧的运行进行测试！</li>
+</ol>
+<p><img src="\img\2022年1月13日\2.png" srcset="/img/loading.gif" lazyload alt="图2"></p>
+<h2 id="测试"><a href="#测试" class="headerlink" title="测试"></a>测试</h2><p>可以通过重启电脑来测试是否会正常运行，循环提醒启动的条件是开机并且登录用户后开始第一次提醒。之后每小时提醒一次，锁屏仍会提醒但是注销不会！</p>
 
             </div>
             <hr>
@@ -311,18 +301,12 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/2022/01/13/2022-01-13-%E8%AE%A9Windows%E6%AF%8F%E4%B8%AA%E5%B0%8F%E6%97%B6%E6%8F%90%E9%86%92%E4%BD%A0%E4%B8%80%E6%AC%A1%E2%80%9C%E8%B5%B7%E6%9D%A5%E5%8A%A8%E5%8A%A8%EF%BC%8C%E5%96%9D%E5%8F%A3%E6%B0%B4%EF%BC%81%E2%80%9D/">
-                        <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">让Windows每个小时提醒你一次“起来动动，喝口水！”</span>
-                        <span class="visible-mobile">上一篇</span>
-                      </a>
-                    
                   </article>
                   <article class="post-next col-6">
                     
                     
-                      <a href="/2021/08/13/2021-07-09-python-part4/">
-                        <span class="hidden-mobile">Python——part 4 判断</span>
+                      <a href="/2021/09/17/2021-09-17-%E8%87%AA%E5%8A%A8%E5%88%A0%E9%99%A4EasyConnect%E5%BC%80%E5%90%AF%E5%90%8E%E5%BC%BA%E5%88%B6%E7%94%9F%E6%88%90%E7%9A%84%E6%A1%8C%E9%9D%A2%E5%BF%AB%E6%8D%B7%E6%96%B9%E5%BC%8F/">
+                        <span class="hidden-mobile">自动删除EasyConnect开启后强制生成的桌面快捷方式</span>
                         <span class="visible-mobile">下一篇</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>
